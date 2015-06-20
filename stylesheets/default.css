@@ -1,0 +1,37 @@
+/* General */
+* {
+	font-family: Open Sans Condensed;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: Oswald;
+}
+
+
+
+/* Header */
+header {
+	background: #35404f;
+	height: 70px;
+}
+
+header ul {
+	list-style-type: none;
+	float:right;
+}
+
+header li {
+	display:inline;
+}
+
+header a {
+	text-decoration: none;
+}
+
+header h1 {
+	display: inline-block;
+	color: #7acccc;
+	margin-left: 10px;
+}
+/* Footer */
+
+/* Homepage */
