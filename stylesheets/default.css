@@ -10,28 +10,65 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 header {
-	background: #35404f;
+	background: #7acccc;
 	height: 70px;
 }
 
 header ul {
 	list-style-type: none;
 	float:right;
+	margin: 40px 15px 0px 0px;
 }
 
 header li {
-	display:inline;
+	display:inline-block;
+	margin-left: 15px;
 }
 
 header a {
 	text-decoration: none;
+	color: #35404f;
+}
+header a:hover {
+	color: white;
 }
 
 header h1 {
 	display: inline-block;
-	color: #7acccc;
+	color: #35404f;
 	margin-left: 10px;
 }
 /* Footer */
+footer {
+	clear:both;
+	background: #35404f;
+}
 
+footer h3 {
+	color: white;
+	font-family: Open Sans Condensed;
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+footer li {
+	display: inline-block;
+}
 /* Homepage */
+
+.index img {
+	float: left;
+	margin: 10px;
+	width:40%;
+}
+
+h3.2 {
+	text-align: right;
+	margin-left: 900px;
+}
+
+h3.3 {
+	margin-left: 500px;
+}
