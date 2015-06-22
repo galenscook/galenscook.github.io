@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galen's Blog</title>
+  <link href="http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+  <link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+</head>
+<body>
+  <header>
+      <a href="../index.html"><h1>Galen Cook</h1></a>
+
+      <ul>
+        <li><a href="#">About Me</a></li>
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+<main class="blog">
+  <a href="index.html"> &larr;Back to list</a>
+  <h1>Classes and IDs</h1>
+  <h2>(or... how do I format you??)</h2>
+  <h4>06|21|15</h4>
+
+  <section>
+    <p>Having "mastered" git and the GitHub workflow (I use that term VERY loosely), Week 2 of Phase 0 focused on web design.  Right off the bat DBC warned us that this was going to be a very time intensive week.  This didn't bode well for me--in the past six days I sold my car, packed my life into boxes and suitcases, moved off an island (Oahu), set up my "nomad pad" that I'll call home for the three weeks before I move to San Francisco, and watched two beautiful humans get married.  Needless to say, I was a little harried.</p>
+
+    <p>The web design class I took in college was my saving grace.  Granted, it was three years ago so I DEFINITELY needed to go through all the curriculum resources to refresh, but I didn't walk into this week completely unprepared.  It was kind of like returning after the summer to take your second year of a language class--you need to brush off the dust, but things start coming back to you.</p>
+
+    <p>Website design consists of two main components, HTML and CSS.  HTML creates the structure of the page.  It's where you type all the content, and you use tags (sets of brackets surrounding a label, like  to tell the page what to do with that content.  If you create a page JUST using HTML, it's going to look very much like a Word Document.  That's where CSS comes in.  CSS is a separate file that you link to your HTML document.  It is simply a set of rules that let's you specify how the content on your HTML page should appear.  Just by "reading" the CSS, internet browsers can take those Word files and make them look like the sites you look at every day.</p>
+
+    <p>In order to apply the rules, you need to be able to tell the CSS which part of the HTML you are trying to change.  Within CSS, you use selectors.  Take the following example: p {color: red;} which says for all p elements, make them red.  This works for very basic websites, but it has it's limitations.  Maybe you want to change the styling of one h1 but not any others.  This is where <strong>classes</strong> and <strong>IDs</strong> come into play.  You add them within an HTML tag as a way to target those specific elements.  Most commonly, especially with beginning programmers like myself, they are used with div tags to separate a section of code, and are used interchangeably, if not hapharzardly.  It wasn't until doing research this week that I finally started to grasp the difference.</p>
+
+    <h3>Class = barcode, ID = serial number</h3>
+    <p>In <a href="https://css-tricks.com/the-difference-between-id-and-class/">this post</a>, Chris Coyier used this analogy that finally clicked things in my brain.  Think of buying a phone.  On the box, there's a barcode.  This allows the salesperson to pull up information on the item.  Every other phone of the same make/model/color will have the exact same barcode, which allows the store to stay organized.  If the price for the phone changes, all the store has to do is change the information for that barcode and, voila, they are all changed. <strong>This is like a class.</strong></p>
+
+    <p>Also on the phone, however, is a serial number.  This number is unique ONLY to that one individual phone.  No other phone in the entire world will have the same number, which is how you can register your phone and sync it to your cellular plan.  <strong>This is like an ID.</strong></p>
+
+    <p>Okay, that's great, but how do you use them?</p>
+
+    <div class="left">
+      <h3>Classes</h3>
+      <p>Classes are generic.  Like a barcode, you can assign them to multiple elements, and then style them at the same time.  Realize you don't like the font color?  Great, change the class styling, and all of those elements will be changed.</p>
+    </div>
+    <div class="right">
+      <h3>IDs</h3>
+      <p>IDs are unique identifiers.  Like the serial number, they can only be used once per page.  If you have an element that is getting some funky styling that nothing else is, use an ID.</p>
+    </div>
+    <p>When I started trying to use classes and IDs, I found myself creating a ton of different IDs then essentially typing the same CSS over and over again.  If you find yourself doing this, stop.  You probably want to make a class, then assign all of those various elements to the same class.  I was so worried about accidentally modifying multiple elements at once, so I found myself trying to be overspecifc.</p>
+
+    <p>Again, Chris Coyier's article saved me.  The beauty of classes, is you can assign multiple classes to the same element.  Two that I always create are the "right" and "left" classes.  Within my CSS, I format these two to float right and left, respectively.  Then, if I have something that's within my "index" class and I realize that I want to also have it float right, I just have to add that into the html.</p>
+
+    <p><img src="../imgs/multipleclasses.png" width="30%" align="left" hspace="10px">So, in this example, all three of the divs will be styled according to the index rules, the second will also be styled by the right rules (for me, it usually means float right) and the third will have index styling in addition to the left styling rules.</p>
+
+    <p>At this point, I'm trying to avoid using IDs.  By being strategic with my classes, I can keep my CSS <em>much</em> cleaner and it makes my maintenance significantly easier (as I'm switching around colors almost hourly).  If I find a super awesome excuse to use an ID again, I'll be sure to let you know!</p>
+    
+    <h4>Happy coding!</h4>
+
+    <h4>-g</h4>
+  </section>
+</main>
+<footer>
+    <h3>Get in touch:</h3>
+      <ul>
+        <li><a href="https://github.com/galenscook"><img src="../imgs/github.png" alt="GitHub" /></a></li>
+        <li><a href="https://twitter.com/galencook"><img src="../imgs/twitter.png" alt="Twitter" /></a></li>
+        <li><a href="https://linkedin.com/in/galencook"><img src="../imgs/linkedin.png" alt="LinkedIn" /></a></li>
+        <li><a href="https://plus.google.com/+GalenCook"><img src="../imgs/googleplus.png" alt="Google+" /></a></li>
+        <li><a href="https://facebook.com/galenscook"><img src="../imgs/facebook.png" alt="Facebook" /></a></li>
+      </ul>
+      <p>Copyright 2015 | Galen Cook</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+<div class="index"></div>
+<div class="index right"></div>
+<div class="index left"></div>
