@@ -6,12 +6,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Oswald;
 }
 
+html {
+	background: #f6f5f2;
+}
 
 
 /* Header */
 header {
 	background: #7acccc;
 	height: 70px;
+	-moz-box-shadow: 0 0 10px #35404f;
+	-webkit-box-shadow: 0 0 10px #35404f;
+	box-shadow: 0 0 10px #35404f;
 }
 
 header ul {
@@ -42,19 +48,33 @@ header h1 {
 footer {
 	clear:both;
 	background: #35404f;
+	width:100%;
 }
 
 footer h3 {
-	color: white;
+	color: #f6f5f2;
 	font-family: Open Sans Condensed;
+	margin: 5px auto auto 5px;
 }
 
 footer ul {
 	list-style-type: none;
+	text-align: center;
 }
 
 footer li {
 	display: inline-block;
+}
+
+footer img {
+	opacity: 0.85;
+	margin: auto 15px 10px 15px;
+	float:none;
+}
+
+footer p {
+	text-align: center;
+	color: #7acccc;
 }
 /* Homepage */
 
@@ -64,11 +84,43 @@ footer li {
 	width:40%;
 }
 
-h3.2 {
-	text-align: right;
-	margin-left: 900px;
+/* Blog Index */
+
+.blogmain ul {
+	list-style-type: none;
+	text-align: center;
 }
 
-h3.3 {
-	margin-left: 500px;
+.blogmain li {
+	margin:20px auto;
+}
+
+.blogmain a {
+	font-family: Oswald;
+	font-size: 2em;
+	text-decoration: none;
+	color: #df5d54;
+}
+
+.blogmain span {
+	display: block;
+	font-size: 1.2em;
+}
+
+/*Blog Post*/
+main {
+	margin: 10px;
+}
+
+.blog h1, h2, h4 {
+	margin:5px auto;
+}
+
+.blog a {
+	text-decoration: none;
+	color: #df5d54;
+}
+
+.blog a:hover {
+	color: #7acccc;
 }
