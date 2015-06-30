@@ -10,7 +10,13 @@ html {
 	background: #f6f5f2;
 }
 
+.left {
+	float: left;
+}
 
+.right {
+	float: right;
+}
 /* Header */
 header {
 	background: #7acccc;
@@ -123,4 +129,24 @@ main {
 
 .blog a:hover {
 	color: #7acccc;
+}
+
+table {
+	margin: 40px;
+	background: #7acccc;
+	border: 1px solid #35404f;
+	width: 10em;
+	text-align: center;
+}
+
+.left table {
+	margin-left: 10em;
+}
+
+.right table {
+	margin-right: 10em;
+}
+
+.clear {
+	clear: both;
 }
