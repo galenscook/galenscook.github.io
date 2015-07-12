@@ -10,10 +10,10 @@
       <a href="../index.html"><h1>Galen Cook</h1></a>
 
       <ul>
-        <li><a href="#">About Me</a></li>
+        <li><a href="../about.html">About Me</a></li>
         <li><a href="index.html">Blog</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../contact.html">Contact</a></li>
       </ul>
     </header>
 <main class="blog">
@@ -28,15 +28,16 @@
     </p>
     <p>Our first couple challenges used really basic input.  One word or one number, then do something to it.  Quickly identifying the limitations of this kind of program, however, we learned about <strong>arrays</strong> and <strong>hashes</strong>.  At their cores, arrays and hashes are pretty much the same thing.  They are used to organize lists of data.  Each item in the list is assigned a "slot", which you can use to "call" the item later in the program.  These are called key-value pairs.  The key refers to the slot
     </p>
-    <p>The only difference lies in what the key is.  Information in an array is slotted by an index number.  The first item in the array is in slot zero, and it counts up from there.  (Yes, slot zero, not slot one.)  So, if you create an array such as: <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">array<span style="color: #333333">[</span><span style="background-color: #fff0f0">&#39;bob&#39;</span>, <span style="background-color: #fff0f0">&#39;shoe&#39;</span>, <span style="background-color: #fff0f0">&#39;horse&#39;</span><span style="color: #333333">]</span>
-    </pre></div>
-    You could then call slot 1 like this: <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">array<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">]</span>
-    </pre></div>
+    <p>The only difference lies in what the key is.  Information in an array is slotted by an index number.  The first item in the array is in slot zero, and it counts up from there.  (Yes, slot zero, not slot one.)  So, if you create an array such as:
+    <pre><code>array["bob", "shoe", "horse"]</code></pre>
+
+    You could then call slot 1 like this: 
+    <pre><code>array[1]</code></pre>
     Which means you'd be calling "shoe". (The numbering takes a little while to get used to).
     </p>
-    <p>As you can see, arrays are based on an order.  In the array we've created above, the order seems pretty arbitrary.  Why is bob in slot zero?  What does that tell us about the data?  For lists that aren't necessarily in an order, a hash often makes more sense.  Rather than using numbers as keys, you (as the programmer) get to assign each value a key that you then use to call the value.  Take a look at the table to the right below.  Doesn't it make much more sense to use this to call the "horse" value? <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020">hash</span><span style="color: #333333">[</span>animal<span style="color: #333333">]</span>
-</pre></div>
-      
+    <p>As you can see, arrays are based on an order.  In the array we've created above, the order seems pretty arbitrary.  Why is bob in slot zero?  What does that tell us about the data?  For lists that aren't necessarily in an order, a hash often makes more sense.  Rather than using numbers as keys, you (as the programmer) get to assign each value a key that you then use to call the value.  Take a look at the table to the right below.  Doesn't it make much more sense to use this to call the "horse" value? 
+    <pre><code>hash{animal}</code></pre>
+    
     </p>
     <div>
     <div class="left">

@@ -17,6 +17,8 @@ html {
 .right {
 	float: right;
 }
+
+
 /* Header */
 header {
 	background: #7acccc;
@@ -149,4 +151,56 @@ table {
 
 .clear {
 	clear: both;
+}
+
+pre {
+    font-size: 90%;
+    line-height: 1.2em;
+    font-family: "Courier 10 Pitch", Courier, monospace; 
+    white-space: pre; 
+    white-space: pre-wrap; 
+    white-space: -moz-pre-wrap; 
+    white-space: -o-pre-wrap; 
+
+    height:1%;
+    width: auto;
+    display: block;
+    clear: both;
+    color: #555555;
+    padding: 1em 1em;
+    margin: auto 40px auto 40px;
+    background: #f4f4f4;
+    border: solid 1px #e1e1e1
+} 
+code { 
+    font-size: 90%;
+    line-height: 1.2em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+
+    display: inline; 
+    color: #555555;
+    padding: 1em 1em;
+    background: #f4f4f4;
+}
+
+/* Contact Page */
+.contact ul {
+	list-style-type: none;
+	text-align: center;
+}
+
+.contact li {
+	display: inline-block;
+}
+
+.contact img {
+	opacity: 0.85;
+	margin: auto 15px 10px 15px;
+	float:none;
+}
+
+.contact figcaption {
+	font-family: Oswald;
+	font-size: 1em;
+	color: #df5d54;
 }
