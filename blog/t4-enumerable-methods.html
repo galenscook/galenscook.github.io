@@ -18,12 +18,34 @@
     </header>
 <main class="blog">
   <a href="index.html"> &larr;Back to list</a>
-  <h1>Title</h1>
-  <h2>Subtitle</h2>
+  <h1>Exploring the World of Enumerables</h1>
+  <h2>The .map Method</h2>
   <h4>07|12|15</h4>
 
   <section>
-  <pre><code>Hello world!</code></pre>
+    <p>DBC took the first week of July off, during which period much of my acquired skill rusted and leaked out of my brain.  This combined with the more advanced Ruby material made diving in to Week 4 somewhat of a challenge.  After being overwhelmed by the first challenge, I put some major time into research and the code started flowing again.  I'd briefly explored the <a href="http://ruby-doc.org/core-2.0.0/Enumerable.html">Enumerable Ruby docs</a> during Week 3, but this week I spent a lot of time scanning through those methods and figuring out how to make them work in my solutions.  One that I used a few times and can definitely see major potential for is the <code>map</code> method, which is the subject of today's post.
+    </p>
+    <h4>map</h4>
+    <p>Let's start by considering the following array: </p>
+    <pre><code>array[1, 2, 3]</code></pre> 
+    <p>In general, Enumerable methods all act like <code>each</code>.  That is to say, they do something to each element of a collection, one at a time.  I've said that <code>map</code> seems so useful because it's purpose is simply (and broadly) to change the elements based on some set of rules.  So, back to our array, if we realized that they should all be negative numbers rather than positive, we could change them all at once like this:</p>
+    <pre><code> array.map {|x| -x} #=> [-1, -2, -3]</code></pre>
+   
+    <p>Now, something important to note, is that <code>map</code> is a non-destructive method.  That is, it does NOT alter the original array.  Instead, it creates a NEW, transformed array.  Because of this, I've found it helpful to define a new variable, that way both the original and the transformed arrays are easily accessible.</p>
+    <pre><code> array = [1, 2, 3] <br>
+  new_array = array.map{|x| -x} <br>
+            <br>
+  p array #=> [1, 2, 3]<br>
+  p new_array #=> [-1, -2, -3]</code></pre>
+    <p>A couple things to note about <code>map</code>:
+    <ul>
+      <li>If you <em>want</em> to transform the original array rather than creating a new one, you can use the <code>map!</code> variation.</li>
+      <li>Once you get comfortable with the basics of <code>map</code>, try experimenting with the code block to target specific elements within the array.  If you want to embed an <code>if</code> method, try using the streamlined <code> ? :</code> notation!</li>
+      </ul>
+      </p>
+
+    <p>After this week, I still feel like I've only scratched the surface of Enumerables' capabilities--but hey, baby steps!.  As a closing piece of advice, <a href="http://ruby-doc.org/core-2.0.0/">Ruby docs</a> are your friend!  Don't be intimidated by them.  Try to find a method that looks promising, and then do some extra research to figure out how to implement it.  Little by little, we'll all get better!</p>
+    
     <h4>Happy coding!</h4>
 
     <h4>-g</h4>
