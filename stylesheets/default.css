@@ -120,6 +120,10 @@ main {
 	margin: 10px;
 }
 
+.blog section {
+	font-size: 1.2em;
+}
+
 .blog h1, h2, h4 {
 	margin:5px auto;
 }
