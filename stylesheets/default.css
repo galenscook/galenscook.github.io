@@ -12,12 +12,19 @@ html {
 
 .left {
 	float: left;
+	width: 40%;
 }
 
 .right {
 	float: right;
+	width: 40%;
 }
 
+section {
+	font-size: 1.2em;
+	padding-right: 2em;
+	padding-left: 2em;
+}
 
 /* Header */
 header {
@@ -86,11 +93,7 @@ footer p {
 }
 /* Homepage */
 
-.index img {
-	float: left;
-	margin: 10px;
-	width:40%;
-}
+
 
 /* Blog Index */
 
@@ -120,9 +123,6 @@ main {
 	margin: 10px;
 }
 
-.blog section {
-	font-size: 1.2em;
-}
 
 .blog h1, h2, h4 {
 	margin:5px auto;
