@@ -93,7 +93,11 @@ footer p {
 }
 /* Homepage */
 
-
+.index img {
+	float: left;
+	margin: 10px;
+	width:80%;
+}
 
 /* Blog Index */
 
