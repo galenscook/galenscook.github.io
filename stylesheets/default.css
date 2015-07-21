@@ -12,12 +12,19 @@ html {
 
 .left {
 	float: left;
+	width: 40%;
 }
 
 .right {
 	float: right;
+	width: 40%;
 }
 
+section {
+	font-size: 1.2em;
+	padding-right: 2em;
+	padding-left: 2em;
+}
 
 /* Header */
 header {
@@ -89,7 +96,7 @@ footer p {
 .index img {
 	float: left;
 	margin: 10px;
-	width:40%;
+	width:80%;
 }
 
 /* Blog Index */
@@ -120,9 +127,6 @@ main {
 	margin: 10px;
 }
 
-.blog section {
-	font-size: 1.2em;
-}
 
 .blog h1, h2, h4 {
 	margin:5px auto;
@@ -178,7 +182,7 @@ pre {
 } 
 code { 
     font-size: 90%;
-    line-height: 1.2em;
+    line-height: 1.8em;
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 
     display: inline; 

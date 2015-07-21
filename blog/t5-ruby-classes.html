@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Galen's Blog</title>
+	<link href="http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+</head>
+<body>
+	<header>
+			<a href="../index.html"><h1>Galen Cook</h1></a>
+
+			<ul>
+				<li><a href="../about.html">About Me</a></li>
+        		<li><a href="index.html">Blog</a></li>
+       			<li><a href="../projects.html">Projects</a></li>
+        		<li><a href="../contact.html">Contact</a></li>
+			</ul>
+		</header>
+	<main class="blog">
+		<a href="index.html"> &larr;Back to list</a>
+		<h1>Classes--Efficiency at it's Finest</h1>
+		<h2>(or, "All Puppies Bark"</h2>
+		<h4>7|18|15</h4>
+	
+	<section>
+		<p>Everything in Ruby is considered an object.  If you're at all involved in programming, you've definitely read that sentence (or some variation of it) before.  I like to think of it instead as everything in Ruby is a noun, is a thing.  Just like "things" around you, objects in Ruby have certain properties, capabilties and behaviors.  The puppy next door is barking, which means barking is a behavior it is capable of.  In fact, barking is something all puppies are capable of.  Rather than defining barking as something each puppy individually can do, we can say "Puppies can bark."  This saves us time and energy.  Programmers LOVE saving time and energy (read: we are lazy), so when objects share properties like this we can create a Class.  Within the Class Puppy, the one barking next door is considered an instance -- one example of an object that falls in this category.</p>
+
+		<p>This is not to say that everything within a class is identical.  Not all puppies are exactly alike, but they do have the similar qualities.  For example:</p>
+
+		<pre><code>class Puppy
+   @name = nil
+   @breed = nil
+   @gender = nil
+end</code></pre>
+		
+		<p>What I've done here is created a <code>class Puppy</code> and said every instance of a puppy will have these three properties -- a name, a breed, and a gender.  Notice that the variables have an @ in front of them -- this means they are <strong>instance variables</strong>.  This is because each instance of the class will have different information to store as these variables.  By using instance variables, we will be able to access this information in all the various methods we create within this class.</p>
+
+		<p>Creating these instance variables with <code>nil</code> doesn't help us very much.  We need to be able to input in those variables, and for that we need to <code>initialize</code> the class.  Initialize is a requirement of any Class definition.  It defines what must occur when you create a new instance of the Class.</p>
+
+		<pre><code>class Puppy
+   def initialize(name, breed, gender)
+      @name = name
+      @breed = breed
+      @gender = gender
+   end
+end</code></pre>
+
+		<p>So, what this code is saying, is that when <code>Puppy.new("Bernice", "chihuahua", "female")</code> is run, the initialize method automatically assigns this information to the appropriate variables.  In doing this, you can create methods to manipulate those variables.  To illustrate this, I'm going to add the variable <code>@antic</code>, because puppies are always up to something.</p>
+
+<pre><code>class Puppy
+   def initialize(name, breed, gender, antic)
+      @name = name
+      @breed = breed
+      @gender = gender
+      @antic = antic
+   end
+
+   def praise
+      p "Good #{@gender}, #{@name}!  What a good #{@breed}, you #{@antic}!"
+   end
+
+   def scold
+      p "Bad #{@gender}, #{@name}!  Why did I get a #{@breed}?  I can't believe you #{@antic}!"
+   end
+end</code></pre>
+
+		<p>Let's take a look at what I've done.  I've created two methods within the class.  This gives me two different ways to interact with the information.</p>
+		<section class = "float left">
+			<pre><code>goodpuppy = Puppy.new("Crocket", "coonhound", "boy", "caught the mouse")
+			goodpuppy.praise  #=> "Good boy, Crockett!  What a good coonhound, you caught the mouse!"</code></pre>
+		</section>
+
+		<section class = "float right">
+			<pre><code>badpuppy = Puppy.new("Bridger", "Rhodesian Ridgeback", "girl", "farted, again")
+			badpuppy.scold  #=> "Bad girl, Bridger!  Why did I get a Rhodesian Ridgeback?  I can't believe you farted, again!"</code></pre>
+		</section>
+		<br>
+		<br>
+		<br>
+		<p class="clear">Now, this was a silly little example, but I hope you can see the possibilities.  By grouping like objects, it allows us to quickly and efficiently manipulate their properties and behaviors.  As usual, I feel like we've only uncovered the tip of the iceberg at this point, but it's fun to see all the things you can do with just this limited amount of experience.  Give it a shot!
+
+		<h4>Happy coding!</h4>
+
+    <h4>-g</h4>
+
+	</section>
+	</main>
+	<footer>
+		<h3>Get in touch:</h3>
+			<ul>
+				<li><a href="https://github.com/galenscook"><img src="../imgs/github.png" alt="GitHub" /></a></li>
+				<li><a href="https://twitter.com/galencook"><img src="../imgs/twitter.png" alt="Twitter" /></a></li>
+				<li><a href="https://linkedin.com/in/galencook"><img src="../imgs/linkedin.png" alt="LinkedIn" /></a></li>
+				<li><a href="https://plus.google.com/+GalenCook"><img src="../imgs/googleplus.png" alt="Google+" /></a></li>
+				<li><a href="https://facebook.com/galenscook"><img src="../imgs/facebook.png" alt="Facebook" /></a></li>
+			</ul>
+			<p>Copyright 2015 | Galen Cook</p>
+	</footer>
+
+</body>
+</html>
