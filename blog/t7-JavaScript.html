@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Galen's Blog</title>
+	<link href="http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+</head>
+<body>
+	<header>
+			<a href="../index.html"><h1>Galen Cook</h1></a>
+
+			<ul>
+				<li><a href="../about.html">About Me</a></li>
+				<li><a href="index.html">Blog</a></li>
+				<li><a href="../projects/index.html">Projects</a></li>
+				<li><a href="../resume.html">Resume</a></li>
+				<li><a href="../contact.html">Contact</a></li>
+			</ul>
+		</header>
+	<main class="blog">
+		<a href="index.html"> &larr;Back to list</a>
+		<h1>Missing Ruby, Learning JavaScript</h1>
+		<h2>Classes and constructor functions</h2>
+		<h4>8|2|15</h4>
+	
+	<section>
+		<p>After spending four weeks getting all nice and comfy in our Ruby bubble, DBC came along this week with a giant pin.  <strong>JavaScript.</strong>  The user-friendly, non-scary, endlessly forgiving Ruby vanished from our lives and left in it's place is symbol-heavy, you-can-put-that-there-but-it-doesn't-mean-I'll-do-anything-with-it, JavaScript.  I mean, I get it.  You want to interact with users on your website?  You need JavaScript.  But if I give input data of the wrong type, I just wish JS would tell me, you know, instead of randomly converting it to a type that IT thinks makes sense... </p>
+		<p>
+			Alright, enough griping.  Clearly, I'm learning something new and it's hard and I miss what I've gotten used to.  But JavaScript isn't going anywhere and it's HIGHLY useful, so I need to put on my big girl pants and figure it out.  Which I've started to do!  I've spent a large portion of this week mentally comparing Ruby and JavaScript, trying to use my knowledge of one to give me a leg up in the other.  In all reality, they are structurally very similar.  Both are dynamically typed, and object oriented.  One glance at the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript Docs</a> makes it pretty clear that we don't have access to the seemingly endless built-in methods that Ruby does, but the more I use it the more I've found ways to, in essence, replicate these methods I've grown to know and love.
+		</p>
+		<p>
+			Building off of the last two tech posts, I want to talk about Ruby classes.  A Ruby class is a robust tool that allows the programmer to set common behaviors for groups of objects, then call various instances of the class.  Let's look at our puppy class from last week.
+		</p>
+		<pre><code>class Puppy
+  def initialize(name, gender, breed)
+    @name = name
+    @gender = gender
+    @breed = breed
+  end
+
+  def name
+    @name
+  end
+
+  def gender
+    @gender
+  end
+
+  def breed
+    @breed
+  end
+end
+
+taco = Puppy.new("Taco", "male", "chihuahua")
+taco.breed
+=> "chihuahua"
+</code></pre>
+		<p>
+			You might notice that this week I've defined three methods, one for each instance variable.  This allows us to access the objects' information.  Ruby uses classes in a BIG way to organize information and behaviors.  Not only can you build classes manually as needed for your program, but there are also many built-in classes that Ruby uses to provide utility, such as <code>Strings</code>, <code>Integers</code>, and <code>Hashes</code>.
+		</p>
+		<p>
+			Classes don't exist in JavaScript, but as I indicated before, there are ways to essentially provide the same function.  Enter: <strong>Constructor Functions</strong>.  Like classes, you can use constructor functions to create new instances with predetermined properties.  Let's use our puppy information to define a constructor function.
+		</p>
+		<pre><code>function Puppy(name, gender, breed){
+  this.name = name;
+  this.gender = gender;
+  this.breed = breed;
+}
+
+var taco = new Puppy("Taco", "male", "chihuahua");
+console.log(taco.gender);
+=> "male"
+</code></pre>
+		<p>
+			As I'm sure you've noticed, this looks REALLY similar to the <code>initialize</code> function.  And, for all intents and purposes, it is.  There are a few differences.  One, obviously, the syntax.  I warned you--JavaScript is all about the semicolons and curly brackets.  But let's look beyond that.  In creating this constructor function, we've created what JavaScript calls a prototype.  A prototype is basically an empty object with certain predetermined properties.  When we use the <code>new</code> method, we create a new object based off this prototype, assigning values to the properties.  
+		</p>
+		<p>
+			I will admit it, there is one aspect of prototypes that I appreciate that classes do not have--the ability to add properties.  Let's say we know all puppies bark, we can add this to the prototype.
+		</p>
+		<pre><code>Puppy.prototype.bark = true;
+var taco = new Puppy("Taco", "male", "chihuahua");
+console.log(taco.bark);
+=> true
+</code></pre>
+		<p>
+			After two weeks of working with Ruby classes I was only just beginning to feel like I understood their true potential.  Naturally, constructor functions and prototypes still feel foreign to me, but I know with JavaScript's inheritance they will end up playing a big role.  As painful as it is training my fingers to enclose everything in curly brackets, I know I'm going to be a better programmer for getting a firm grasp on JavaScript while continuing to brush up on my Ruby knowledge.
+		</p>
+		<h4>Happy coding!</h4>
+		<h4>-g</h4>
+	</section>
+	</main>
+	<footer>
+		<h3>Get in touch:</h3>
+			<ul>
+				<li><a href="https://github.com/galenscook"><img src="../imgs/github.png" alt="GitHub" /></a></li>
+				<li><a href="https://twitter.com/galencook"><img src="../imgs/twitter.png" alt="Twitter" /></a></li>
+				<li><a href="https://linkedin.com/in/galencook"><img src="../imgs/linkedin.png" alt="LinkedIn" /></a></li>
+				<li><a href="https://plus.google.com/+GalenCook"><img src="../imgs/googleplus.png" alt="Google+" /></a></li>
+				<li><a href="https://facebook.com/galenscook"><img src="../imgs/facebook.png" alt="Facebook" /></a></li>
+			</ul>
+			<p>Copyright 2015 | Galen Cook</p>
+	</footer>
+
+</body>
+</html>
