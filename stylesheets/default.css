@@ -30,9 +30,6 @@ section {
 header {
 	background: #7acccc;
 	height: 70px;
-	-moz-box-shadow: 0 0 10px #35404f;
-	-webkit-box-shadow: 0 0 10px #35404f;
-	box-shadow: 0 0 10px #35404f;
 }
 
 header ul {
@@ -85,6 +82,8 @@ footer img {
 	opacity: 0.85;
 	margin: auto 15px 10px 15px;
 	float:none;
+	height: 3.5em;
+	width: 3.5em;
 }
 
 footer p {
@@ -112,19 +111,24 @@ footer p {
 
 .blogmain a {
 	font-family: Oswald;
-	font-size: 2em;
+	font-size: 1.2em;
 	text-decoration: none;
 	color: #df5d54;
 }
 
 .blogmain span {
 	display: block;
-	font-size: 1.2em;
+	font-size: 0.8em;
+}
+
+.blogmain h3 {
+	text-align: center;
+	border-bottom: solid 1.5px #7acccc;
 }
 
 /*Blog Post*/
 main {
-	margin: 10px;
+	margin: 3em;
 }
 
 
@@ -211,4 +215,28 @@ code {
 	font-family: Oswald;
 	font-size: 1em;
 	color: #df5d54;
+}
+
+/* Project Index */
+
+.projects {
+	width: 31%;
+	display: block;
+	margin: 10px;
+	float: left;
+}
+
+.projects h3 {
+	border-bottom: solid 1.5px #df5d54;
+	margin-bottom: 0.5em;
+	padding-left: 0.5em;
+}
+
+.projects h5 {
+	margin-top: 0px;
+	padding-left: 0.5em;
+}
+
+.projects p {
+	padding-left: 1.5em;
 }
