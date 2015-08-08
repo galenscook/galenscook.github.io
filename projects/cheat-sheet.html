@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Object Cheat Sheet</title>
+    <link href="http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="../stylesheets/cheat-sheet.css">
+    <link type="text/css" rel="stylesheet" href="../stylesheets/default.css"
+</head>
+<body>
+    <header>
+        <h1>JavaScript Objects Cheat Sheet</h1>
+    </header>
+    <section class="introduction">
+      <a href="index.html"> &larr;Back to project list</a><br>
+        <p>
+            Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. The concept of objects in JavaScript can be understood with real life, tangible objects.
+        </p>
+        <p>
+In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics.
+        </p>
+        <p>
+            Here is an example of an empty object.
+        </p>
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:30%;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin:auto;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">var</span> pizza <span style="color: #333333">=</span> {};
+</pre></div>
+        <p>
+            Let's take a look at how to add things to our pizza object. JavaScript offers two ways to do this: object literal notation, and dot notation. Below you'll find a guide for both.
+        </p>
+    </section>
+    <section class="row">
+        <section class="column_left">
+            <h3>Object Literal Notation</h3>
+            <p>Note that with object literal notation, the properties and values are written as strings, as the syntax requires quotation marks.
+            </p>
+            <h4>Adding Properties and Values</h4>
+            <p>
+                Description of all the toppings we want to add, and the sauce.
+            </p>
+            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">pizza["topping1"] <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>;
+pizza["topping2"] <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;pepperoni&quot;</span>;
+pizza["sauce"] <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>;
+pizza["crust"] <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;hand-tossed&quot;</span>;
+
+pizza = { 
+   topping1<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+   topping2<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;pepperoni&quot;</span>,
+   sauce<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;hand-tossed&quot;</span>}
+</pre></div>
+
+
+        </section>
+        <section class="column_right">
+            <h3>Object Dot Notation</h3>
+            <p>Note that with object dot notation, the dot indicates that what follows is variable name.  This changes the way dot notation is used in other levels of objects.
+            </p>
+            <h4>Adding Properties and Values</h4>
+            <p>
+                Description of all the toppings we want to add, and the sauce.
+            </p>
+            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">pizza.topping1 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>;
+pizza.topping2 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;pepperoni&quot;</span>;
+pizza.sauce <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>;
+pizza.crust <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;hand-tossed&quot;</span>;
+
+pizza = {
+   topping1<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+   topping2<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;pepperoni&quot;</span>,
+   sauce<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;hand-tossed&quot;</span>}
+</pre></div>
+
+
+        </section>
+    </section>
+    <section class="row">
+            <section class="column_left">
+                <h4>Removing Properties and Values</h4>
+                <p>
+                    If you decide you don't want pepperoni on your pizza, you can always take it off. You can keep the topping2 property and leave it with an undefined value, or simply remove the property and value pair altogether. Here's how you would keep the property but remove the value, and what this change does to our object when we print it out.
+                </p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">pizza[<span style="background-color: #fff0f0">&quot;topping2&quot;</span>] <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">undefined</span>;
+
+<span style="color: #888888">// now that we&#39;ve removed the pepperoni</span>
+<span style="color: #888888">// here&#39;s how our object looks</span>
+
+pizza = {
+   topping1 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+   topping2 <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">undefined</span>,
+   sauce <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;hand-tossed&quot;</span> }
+</pre></div>
+
+
+
+                <p>
+                    Our topping2 property has an undefined value, which is the same as saying our pizza <em>could</em> have a second topping, it just doesn't happen to. An undefined value is still a value after all. It's just not very meaningful. If you wanted to remove the option for a second topping altogether, you would need to remove the value and the property. Here's how you would do it, and what this change would do to our pizza.
+                </p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">delete</span> pizza[<span style="background-color: #fff0f0">&quot;topping2&quot;</span>];
+
+<span style="color: #888888">// delete object[property] removes a</span>
+<span style="color: #888888">// property and its value. here&#39;s what</span>
+<span style="color: #888888">// our pizza object looks like now</span>
+
+pizza = {
+   topping1 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+   sauce <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;hand-tossed&quot;</span> }
+</pre></div>
+
+                <p>
+                    Now our pizza object only has three properties and three values. It's a pie fit for an pizza-loving vegetarian.
+                </p>
+
+            </section>
+            <section class="column_right">
+                <h4>Removing Properties and Values</h4>
+                <p>
+                    If you decide you don't want pepperoni on your pizza, you can always take it off. You can keep the topping2 property and leave it with an undefined value, or simply remove the property and value pair altogether. Here's how you would keep the property but remove the value, and what this change does to our object when we print it out.
+                </p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">pizza.topping2 <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">undefined;</span>
+
+<span style="color: #888888">// now that we&#39;ve removed the pepperoni</span>
+<span style="color: #888888">// here&#39;s how our object looks</span>
+
+pizza = {
+   topping1 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+   topping2 <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">undefined</span>,
+   sauce <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;hand-tossed&quot;</span> }
+</pre></div>
+
+
+
+                <p>
+                    Our topping2 property has an undefined value, which is the same as saying our pizza <em>could</em> have a second topping, it just doesn't happen to. An undefined value is still a value after all. It's just not very meaningful. If you wanted to remove the option for a second topping altogether, you would need to remove the value and the property. Here's how you would do it, and what this change would do to our pizza.
+                </p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">delete</span> pizza.topping2;
+
+<span style="color: #888888">// delete object.property removes a</span>
+<span style="color: #888888">// property and its value. here&#39;s what</span>
+<span style="color: #888888">// our pizza object looks like now</span>
+
+pizza = {
+   topping1 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+   sauce <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;hand-tossed&quot;</span> }
+</pre></div>
+
+                <p>
+                    Now our pizza object only has three properties and three values. It's a pie fit for an pizza-loving vegetarian.
+                </p>
+
+            </section>
+    </section>
+<section class="row">
+        <section class="column_left">
+            <h4>Changing Property Values</h4>
+            <p>
+            Object properties must be unique.  Because of this, changing a property's value looks identical to adding a property.
+            </p>
+            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">// This is our current pizza.</span>
+pizza = {
+   topping1<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+   sauce<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;hand-tossed&quot;</span>}
+
+<span style="color: #888888">//If instead we want thin crust, we do this.</span>
+pizza[<span style="background-color: #fff0f0">&quot;crust&quot;</span>] <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;thin&quot;</span>;
+
+<span style="color: #888888">//This is our altered object.</span>
+pizza = {
+   topping1<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+   sauce<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;thin&quot;</span>}
+</pre></div>
+       
+        </section>
+        <section class="column_right">
+            <h4>Changing Property Values</h4>
+            <p>
+            Object properties must be unique.  Because of this, changing a property's value looks identical to adding a property.
+            </p>
+            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">// This is our current pizza.</span>
+pizza = {
+   topping1<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+   sauce<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;hand-tossed&quot;</span>}
+
+<span style="color: #888888">//If instead we want thin crust, we do this.</span>
+pizza.crust <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;thin&quot;</span>;
+
+<span style="color: #888888">//This is our altered object.</span>
+pizza = {
+   topping1<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+   sauce<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;thin&quot;</span>}
+</pre></div>           
+        </section>
+    </section>
+    <section class="row">
+        <section class="column_left">
+            <h4>Nesting Objects within Objects</h4>
+            <p>Sometimes, a property has more than one value.  When this happens, you can define the property as it's own object, thereby creating a nested object.  If we wanted multiple toppings on our pizza, rather than naming a bunch of separate properties, we could nest them!
+            </p>
+            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//If we wanted to add toppings, we could do so by making the toppings property an object itself.</span>
+
+pizza[<span style="background-color: #fff0f0">&quot;toppings&quot;</span>] <span style="color: #333333">=</span> {};
+pizza[<span style="background-color: #fff0f0">&quot;toppings&quot;</span>][<span style="background-color: #fff0f0">&quot;topping1&quot;</span>] <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>;
+pizza[<span style="background-color: #fff0f0">&quot;toppings&quot;</span>][<span style="background-color: #fff0f0">&quot;topping2&quot;</span>] <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;pepperoni&quot;</span>;
+pizza[<span style="background-color: #fff0f0">&quot;toppings&quot;</span>][<span style="background-color: #fff0f0">&quot;topping3&quot;</span>] <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;peppers&quot;</span>;
+
+<span style="color: #888888">//This is our new nested object.</span>
+pizza <span style="color: #333333">=</span> {
+   toppings<span style="color: #333333">:</span> {
+      topping1<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+      topping2<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;pepperoni&quot;</span>,
+      topping3<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;peppers&quot;</span>},
+   sauce<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;thin&quot;</span>
+}
+
+<span style="color: #888888">//To access just the second topping, we would type this.</span>
+pizza[<span style="background-color: #fff0f0">&quot;toppings&quot;</span>][<span style="background-color: #fff0f0">&quot;topping2&quot;</span>] <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;pepperoni&quot;</span>
+</pre></div>
+
+
+        </section>
+        <section class="column_right">
+            <h4>Nesting Objects within Objects</h4>
+            <p>Sometimes, a property has more than one value.  When this happens, you can define the property as it's own object, thereby creating a nested object.  If we wanted multiple toppings on our pizza, rather than naming a bunch of separate properties, we could nest them!
+            </p>
+            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//If we wanted to add toppings, we could do so by making the toppings property an object itself.</span>
+
+pizza.toppings <span style="color: #333333">=</span> {};
+pizza.toppings.topping1 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>;
+pizza.toppings.topping2 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;pepperoni&quot;</span>;
+pizza.toppings.topping3 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;peppers&quot;</span>;
+
+<span style="color: #888888">//This is our new nested object.</span>
+pizza <span style="color: #333333">=</span> {
+   toppings<span style="color: #333333">:</span> {
+      topping1<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;cheese&quot;</span>,
+      topping2<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;pepperoni&quot;</span>,
+      topping3<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;peppers&quot;</span>},
+   sauce<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;light sauce&quot;</span>,
+   crust<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;thin&quot;</span>
+}
+
+<span style="color: #888888">//To access just the second topping, we would type this.</span>
+pizza.toppings.topping2 <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;pepperoni&quot;</span>
+</pre></div>
+
+                      
+        </section>
+    </section>
+    
+</body>
+</html>
