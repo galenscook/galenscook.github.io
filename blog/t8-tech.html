@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Galen's Blog</title>
+	<link href="http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+</head>
+<body>
+	<header>
+			<a href="../index.html"><h1>Galen Cook</h1></a>
+
+			<ul>
+				<li><a href="../about.html">About Me</a></li>
+				<li><a href="index.html">Blog</a></li>
+				<li><a href="../projects/index.html">Projects</a></li>
+				<li><a href="../resume.html">Resume</a></li>
+				<li><a href="../contact.html">Contact</a></li>
+			</ul>
+		</header>
+	<main class="blog">
+		<a href="index.html"> &larr;Back to list</a>
+		<h1>Regexes</h1>
+		<h2>What actually happens when you type CTRL+F</h2>
+		<h4>8|9|15</h4>
+	
+	<section>
+		<p>
+			I've said this before.  Programmers like to expend minimal effort for maximum utility.  (So I guess in that regard we are like every other person in the world).  In order to do this, we have a plethora of tools and tricks in our programming toolbox, ready to use when things get just a little too tedious.  <strong>Regular expressions</strong> are among these tools.
+		</p>
+		<h4>Regular Expressions -- An Overview</h4>
+		<p>
+			Regular expressions, or <em>regexes</em>, provide easy ways to match text patterns.  Their uses are extensive, and include things like find and replace operations, as well as checking user input for fields that require a specific format.  A quick Google search will return endless regex guides (like <a href="http://www.regular-expressions.info/quickstart.html">this one</a>), which are really robust and helpful, but can be dense to wade through.  So let's dive in and demystify basic regexes.
+		</p>
+		<p>
+			Note: Regexes are NOT language specific -- they can be used in most programming languages.  I'm going over the core syntax.  Implementation for each language may be slightly different.
+		</p>
+		<h4>Basics</h4>
+		<p>
+			At it's most basic, a regex matches a literal string.  This part is easy.  A couple of things to notice.  The first pair may not seem like a match because they are not identical.  But, the match CONTAINS the characters from the regex, thus the match was returned.  There are ways to specify that you want to search for <code>123</code> on it's own, more on that later.  The second thing is that, for the most part, regexes are <strong>case sensitive</strong>.  The second regex in the table would NOT have returned a match for <code>hello</code>.
+			<table>
+				<tr>
+					<th colspan="2">Basic Regexes</th>
+				</tr>
+				<tr>
+					<th>Regex</th>
+					<th>Match</th>
+				</tr>
+				<tr>
+					<td>123</td>
+					<td>01234</td>
+				</tr>
+				<tr>
+					<td>HELLO</td>
+					<td>HELLO</td>
+				</tr>
+			</table>
+		</p>
+		<h4>Quantifiers</h4>
+		<p>
+			Okay, so if you know EXACTLY what string you are looking for, what's above will do it for you.  Generally, however, that's not how these things work.  When there's some wiggle room in terms of the number of characters, you use quantifiers.  The most common quantifiers are <code>* ? +</code>.
+			<ul style="list-style-type:none">
+				<li>* &rarr; matches ANY number of the character before it (zero to infinity)</li>
+				<li>? &rarr; matches zero or one of the character before it</li>
+				<li>+ &rarr; matches one or more of the character before it</li>
+			</ul>
+			<table>
+				<tr>
+					<th colspan="2">Quantifiers/th>
+				</tr>
+				<tr>
+					<th>Regex</th>
+					<th>Matches</th>
+				</tr>
+				<tr>
+					<td>ab*c</td>
+					<td>ac, abbbbbc, aabc</td>
+				</tr>
+				<tr>
+					<td>ab?c</td>
+					<td>ac, aaabc</td>
+				</tr>
+				<tr>
+					<td>ab+c</td>
+					<td>abc, aabc</td>
+				</tr>
+			</table>
+		</p>
+		<h4>Metacharacters</h4>
+		<p>
+			There are 12 characters that are called metacharacters or special characters.  They have special meanings, and by that I mean they allow you to specify certain search parameters.  The 12 metacharacters are <code>\  ^  $  .  |  ?  *  +  (  )  [  {</code>.  We've already looked at three of them in their use as quantifiers above.  There is a lot that you can do with these characters, see <a href="http://www.regular-expressions.info/refcharacters.html">here</a> for a more complete list.  The most common uses are below.
+			<ul style="list-style-type:none">
+				<li>. &rarr; matches ANY single character</li>
+				<li>\n &rarr; matches a newline character</li>
+				<li>\t &rarr; matches a tab</li>
+				<li>\d &rarr; matches a digit</li>
+				<li>\D &rarr; matches a non-digit</li>
+				<li>\w &rarr; matches an alphanumeric character</li>
+				<li>\W &rarr; matches a non-alphanumeric character</li>
+				<li>\s &rarr; matches a whitespace character</li>
+				<li>\S &rarr; matches a non-whitespace character</li>
+				<li>\ &rarr; used to escape special characters, so they can be used literally</li>
+				<li>^ &rarr; matches if the following character is at the BEGINNING of the input string</li>
+				<li>$ &rarr; matches if the preceding character is at the END of the input string</li>
+			</ul>
+			<table>
+				<tr>
+					<th colspan="2">Metacharacters/th>
+				</tr>
+				<tr>
+					<th>Regex</th>
+					<th>Matches</th>
+				</tr>
+				<tr>
+					<td>^\d</td>
+					<td>123, 1ab</td>
+				</tr>
+				<tr>
+					<td>\w\d$</td>
+					<td>apple1, b4</td>
+				</tr>
+				<tr>
+					<td>^\w*9$</td>
+					<td>aaa9, oranges789</td>
+				</tr>
+			</table>
+		</p>
+		<h4>Character Classes</h4>
+		<p>
+			Sometimes, you have several characters that are acceptable in one position.  When this is the case, you can use a character class.  The acceptable characters are placed within square brackets (<code>[]</code>), and matches are returned if they have only ONE of the characters in the class.  There are only two special characters used in classes, <code>-</code> and <code>^</code>.  All of the other metacharacters are treated al literals.
+			<ul style="list-style-type:none">
+				<li>- &rarr; matches any character within the range
+				<li>^ &rarr; matches anything that is NOT the following character</li>
+			</ul>
+			<table>
+				<tr>
+					<th colspan="2">Character Classes/th>
+				</tr>
+				<tr>
+					<th>Regex</th>
+					<th>Matches</th>
+				</tr>
+				<tr>
+					<td>gr[ae]y</td>
+					<td>grey, gray</td>
+				</tr>
+				<tr>
+					<td>Exhibit\w[A-Z]</td>
+					<td>Exhibit A, Exhibit P, Exhibit Z</td>
+				</tr>
+				<tr>
+					<td>q[^u]</td>
+					<td>qi, qat</td>
+				</tr>
+			</table>
+		</p>
+		<p>
+			Regexes can be intimidating.  Trust me, I get it.  Looking at something that looks like this <code>^[A-Za-z0-9_\.-]+@[A-Za-z0-9_\.-]+[A-Za-z0-9_][A-Za-z0-9_]$</code> still makes my head spin a little bit.  But the power regexes provide makes them worth the effort.  The snippet above?  It matches to any email address.  Useful?  Definitely.  See if you can pull apart the pieces to figure out how it works!
+		</p>
+		<h4>Happy coding!</h4>
+		<h4>-g</h4>
+	</section>
+	</main>
+	<footer>
+		<h3>Get in touch:</h3>
+			<ul>
+				<li><a href="https://github.com/galenscook"><img src="../imgs/github.png" alt="GitHub" /></a></li>
+				<li><a href="https://twitter.com/galencook"><img src="../imgs/twitter.png" alt="Twitter" /></a></li>
+				<li><a href="https://linkedin.com/in/galencook"><img src="../imgs/linkedin.png" alt="LinkedIn" /></a></li>
+				<li><a href="https://plus.google.com/+GalenCook"><img src="../imgs/googleplus.png" alt="Google+" /></a></li>
+				<li><a href="https://facebook.com/galenscook"><img src="../imgs/facebook.png" alt="Facebook" /></a></li>
+			</ul>
+			<p>Copyright 2015 | Galen Cook</p>
+	</footer>
+
+</body>
+</html>
