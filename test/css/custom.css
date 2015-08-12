@@ -1,6 +1,18 @@
-html, body {
+body {
 	background-image: url(../imgs/background.gif);
 	background-repeat: repeat;
+	background-size: auto 100%;
+}
+
+html {
+	position: relative;
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -60px;
+	padding: 0 0 60px;
 }
 
 body { 
@@ -14,10 +26,32 @@ body {
 	min-height: 10em;
 }
 
+p {
+	font-family: Open Sans Condensed;
+	font-size: 1.2em;
+}
+
+a {
+	font-family: Open Sans Condensed;
+}
+
+.clear {
+	clear:both;
+}
+
+.left {
+	float: left;
+	width: 48%;
+}
+
+.right {
+	float: right;
+	width: 50%;
+}
 /* INDEX PAGE */
 
-html, body, .container-fluid {
-  height: 100%;
+html, .container-fluid {
+  min-height: 100%;
 }
 .sidebar {
   background-color: #35404F;
@@ -54,6 +88,11 @@ html, body, .container-fluid {
 	font-family: Open Sans Condensed;
 	color: #f6f5f2;
 	font-size: 1.2em;
+	text-decoration: none;
+}
+
+.index-nav a:hover {
+	color: #7acccc;
 }
 
 .index h1 {
@@ -75,7 +114,17 @@ html, body, .container-fluid {
 
 .navbar-default .navbar-brand {
 	color: #DF5D54;
+	font-family: Oswald;
 }
+
+.navbar-default .navbar-nav li>a:hover {
+	color: #7acccc;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #7acccc;
+}
+
 /* FOOTER */
 .footer {
 	position: absolute;
