@@ -3,6 +3,17 @@ html, body {
 	background-repeat: repeat;
 }
 
+body { 
+	padding-bottom: 70px; 
+}
+
+.matting {
+	background-color: #f6f5f2;
+	border: 1px solid #eeece6;
+	border-radius: 4px;
+	min-height: 10em;
+}
+
 /* INDEX PAGE */
 
 html, body, .container-fluid {
@@ -42,18 +53,44 @@ html, body, .container-fluid {
 .index-nav a {
 	font-family: Open Sans Condensed;
 	color: #f6f5f2;
-	font-weight: 500;
-	line-height: 1.1;
+	font-size: 1.2em;
 }
 
 .index h1 {
 	font-family: Open Sans Condensed;
 }
 
+/* NON-INDEX NAVBAR */
+
+.navbar-default {
+	background: #35404f;
+	border-color: #2d3643;
+}
+
+.navbar-default .navbar-nav li>a {
+	color: #f6f5f2;
+	font-family: Open Sans Condensed;
+	font-size: 1.2em;
+}
+
+.navbar-default .navbar-brand {
+	color: #DF5D54;
+}
 /* FOOTER */
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: #35404f;
+	border: 1px solid #2d3643;
+	border-radius: 4px;
+	min-height: 50px;
+}
+
 .footer ul {
 	list-style-type: none;
-	margin-left: -2em
+	margin-left: -2em;
+	margin-bottom: 0px;
 }
 
 .footer li {
@@ -64,4 +101,11 @@ html, body, .container-fluid {
 .footer img {
 	max-width: 40px;
 	max-height: 40px;
+	margin: 10px 10px;
 }
+.footer.index {
+	border: none;
+	bottom: auto;
+	position: auto;
+}
+
