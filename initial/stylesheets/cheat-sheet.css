@@ -1,0 +1,33 @@
+
+header {
+    text-align: center;
+}
+
+section {
+    margin-bottom: 1em;
+}
+
+.introduction {
+    text-align: center;
+}
+
+.column_left {
+    float: left;
+    width: 40%;
+    text-align: center;
+}
+
+.column_right {
+    float: right;
+    width: 45%;
+    text-align: center;
+}
+
+.row {
+    clear: both;
+    text-align: center;
+}
+
+div {
+    text-align: left;
+}

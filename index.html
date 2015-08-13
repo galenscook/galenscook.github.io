@@ -1,49 +1,82 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Galen's Phase 0 GitHub Site</title>
-	<link href="http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
-	<link type="text/css" rel="stylesheet" href="stylesheets/default.css">
-</head>
-	<body>
-		<header>
-			<a href="index.html"><h1>Galen Cook</h1></a>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Galen Cook</title>
 
-			<ul>
-			<li><a href="about.html">About Me</a></li>
-			<li><a href="blog/index.html">Blog</a></li>
-			<li><a href="projects/index.html">Projects</a></li>
-			<li><a href="resume.html">Resume</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-		</header>
-	
-		<section class="index">
-			<h1>Hello!  I'm...</h1>
-			<section class="left">
-				<img src="imgs/galen_puppy.jpg">
-			</section>
-			<section class="right">
-				<h3 style="margin-left: -200px;">a former teacher.</h3>
-				<h3>a San Francisco transplant.</h3>
-				<h3 style="margin-left: -120px;">a beginner programmer.</h3>
-				<h3 style="margin-left: 200px;">a puppy enthusiast.</h3>
-				<h3 style="margin-left: -50px;">a life-long student.</h3>
-				<h3 style="margin-left: 150px;">a die-hard Tarheel.</h3>
-				<h2 style="float:right; color: #DF5D54;">Galen Cook.</h2>
-			</section>
-		</section>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-		<footer>
-			<h3>Get in touch:</h3>
-			<ul>
-				<li><a href="https://github.com/galenscook"><img src="imgs/github.png" alt="GitHub" /></a></li>
-				<li><a href="https://twitter.com/galencook"><img src="imgs/twitter.png" alt="Twitter" /></a></li>
-				<li><a href="https://linkedin.com/in/galencook"><img src="imgs/linkedin.png" alt="LinkedIn" /></a></li>
-				<li><a href="https://plus.google.com/+GalenCook"><img src="imgs/googleplus.png" alt="Google+" /></a></li>
-				<li><a href="https://facebook.com/galenscook"><img src="imgs/facebook.png" alt="Facebook" /></a></li>
-			</ul>
-			<p>Copyright 2015 | Galen Cook</p>
-		</footer>
-	</body>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!--Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid index">
+      <div class="row">
+        <div class="col-md-8 content">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <img src="imgs/logo.png" class="img-responsive index" alt="logo">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h1>FULL STACK DEVELOPER IN TRAINING</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-md-offset-8 sidebar">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <img src="imgs/galenhome.jpg" class="img-responsive img-circle" alt="Galen">
+            </div>
+          </div>
+          <!-- Nav Bar -->
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 index-nav">
+                <ul>
+                  <li><a href="about.html">ABOUT ME</a></li>
+                  <li><a href="blog/index.html">BLOG</a></li>
+                  <li><a href="projects/index.html">PROJECTS</a></li>
+                  <li><a href="resume.html">RESUME</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+          </div>
+          <!--Social Media Icons-->
+          <div class="row footer index">
+            <div class="text-center">
+              <ul>
+                <li><a href="https://github.com/galenscook"><img src="imgs/github.png" alt="GitHub" /></a></li>
+                <li><a href="https://twitter.com/galencook"><img src="imgs/twitter.png" alt="Twitter" /></a></li>
+                <li><a href="https://linkedin.com/in/galencook"><img src="imgs/linkedin.png" alt="LinkedIn" /></a></li>
+                <li><a href="https://plus.google.com/+GalenCook"><img src="imgs/googleplus.png" alt="Google+" /></a></li>
+                <li><a href="https://facebook.com/galenscook"><img src="imgs/facebook.png" alt="Facebook" /></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
