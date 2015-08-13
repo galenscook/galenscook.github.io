@@ -1,0 +1,18 @@
+.table{
+	width:auto;
+	margin-left: 5em;
+}
+
+th {
+	text-align: center;
+	font-family: Oswald;
+	font-weight: normal;
+}
+
+img {
+	margin: 10px;
+}
+
+li {
+	font-size: 1.2em;
+}
