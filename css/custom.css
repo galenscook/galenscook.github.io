@@ -163,9 +163,9 @@ html, .container-fluid {
 }
 
 .footer img {
-	max-width: 40px;
-	max-height: 40px;
-	margin: 8px 8px;
+	max-width: 35px;
+	max-height: 35px;
+	margin: 6px 6px;
 	border: none;
 }
 .footer.index {
@@ -208,17 +208,4 @@ html, .container-fluid {
 	border: 2px solid #eeece6;
 	border-radius: 4px;
 	min-height: 60px;
-}
-
-/*Blog Posts*/
-
-.table{
-	width:auto;
-	margin-left: 5em;
-}
-
-th {
-	text-align: center;
-	font-family: Oswald;
-	font-weight: normal;
 }
