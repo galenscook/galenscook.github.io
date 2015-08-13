@@ -67,6 +67,8 @@ html, .container-fluid {
 }
 .sidebar {
   background-color: #35404F;
+  border: 1px solid #2d3643;
+  border-radius: 4px;
 }
 
 @media (min-width: 992px) {
